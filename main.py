@@ -24,6 +24,7 @@ for video in videos:
     base, ext = os.path.splitext(video)
     aac = '{}.aac'.format(base)
     srt = '{}.srt'.format(base)
+    json = '{}.json'.format(base)
 
     # Step 1: convert to aac
     print('Convert to aac')
@@ -41,6 +42,8 @@ for video in videos:
     req.ChannelNum = 1
     req.ResTextFormat = 2
     req.SourceType = 1
+    req.ConvertNumMode = 3
+    req.FilterModal = 1
     req.Data = base64.b64encode(data).decode('utf-8')
     resp = client.CreateRecTask(req)
 
@@ -53,6 +56,8 @@ for video in videos:
         req.TaskId = task_id
         resp = client.DescribeTaskStatus(req)
         if resp.Data.StatusStr == "success":
+            open(json, 'w').write(resp.to_json_string())
+            print('Saving json result')
             break
         sleep(5)
 
