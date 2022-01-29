@@ -28,7 +28,7 @@ for video in videos:
 
     # Step 1: convert to aac
     print('Convert to aac')
-    os.system('ffmpeg -y -i "{}" -vn -ar 16000 {}'.format(video, aac))
+    os.system('ffmpeg -y -i "{}" -vn -ar 16000 "{}"'.format(video, aac))
 
     # Step 2: upload to tencent cloud
     print('Upload to tencent cloud')
