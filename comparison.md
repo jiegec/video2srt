@@ -1,3 +1,9 @@
+# whisper
+
+地址：https://github.com/OpenAI/whisper
+
+不要钱，但是中文效果差一些。
+
 # 腾讯云
 
 地址：https://cloud.tencent.com/document/product/1093/35686
