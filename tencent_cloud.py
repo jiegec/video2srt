@@ -1,3 +1,4 @@
+# Generate subtitles for videos using Tencent Cloud ASR
 import argparse
 import os
 import base64

@@ -1,0 +1,5 @@
+venv
+*.aac
+*.srt
+*.mp4
+*.json
