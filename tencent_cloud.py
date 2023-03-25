@@ -52,18 +52,18 @@ for video in videos:
 
     # Step 3: retrieve result
     while True:
-        print('Waiting for result')
+        print('Wait for result')
         req = models.DescribeTaskStatusRequest()
         req.TaskId = task_id
         resp = client.DescribeTaskStatus(req)
         if resp.Data.StatusStr == "success":
+            print(f'Save json result to {json}')
             open(json, 'w').write(resp.to_json_string())
-            print('Saving json result')
             break
         sleep(5)
 
     # Step 3: save to srt
-    print('Saving subtitle')
+    print(f'Save subtitle to {srt}')
     result = resp.Data.Result
     counter = 1
     with open(srt, 'w') as f:
