@@ -14,5 +14,5 @@ requests==2.32.4
     # via tencentcloud-sdk-python
 tencentcloud-sdk-python==3.0.854
     # via -r requirements.in
-urllib3==1.26.19
+urllib3==2.5.0
     # via requests
