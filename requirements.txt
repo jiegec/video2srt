@@ -10,7 +10,7 @@ charset-normalizer==3.4.2
     # via requests
 idna==3.10
     # via requests
-requests==2.32.4
+requests==2.33.0
     # via tencentcloud-sdk-python
 tencentcloud-sdk-python==3.0.1405
     # via -r requirements.in
