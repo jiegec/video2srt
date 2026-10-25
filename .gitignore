@@ -3,3 +3,5 @@ venv
 *.srt
 *.mp4
 *.json
+
+.venv/

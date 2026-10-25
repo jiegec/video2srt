@@ -1,0 +1,12 @@
+[project]
+name = "video2srt"
+version = "0.1.0"
+description = "Generate subtitles for videos using Tencent Cloud ASR"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "tencentcloud-sdk-python>=3.1.193",
+]
+
+[tool.uv]
+package = false
